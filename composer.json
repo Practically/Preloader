@@ -1,0 +1,41 @@
+{
+    "name": "practically/preloader",
+    "description": "PHP preloading for PHP ^7.4",
+    "type": "library",
+	"require": {
+		"php": "^7.4"
+	},
+    "require-dev": {
+        "symfony/phpunit-bridge": "^5.2",
+        "squizlabs/php_codesniffer": "^3.5",
+        "vimeo/psalm": "^4.5"
+    },
+	"autoload": {
+        "psr-4": {
+            "Practically\\Preloading\\": "src"
+        }
+	},
+	"autoload-dev": {
+        "psr-4": {
+            "Practically\\Preloading\\Tests\\": "tests"
+        }
+	},
+	"scripts": {
+        "test": "simple-phpunit tests",
+        "psalm": "psalm",
+        "cs:check": "phpcs --standard=./ruleset.xml -s src tests",
+        "cs:fix": "phpcbf --standard=./ruleset.xml -s src tests",
+		"pre-commit": [
+            "@test",
+			"@psalm",
+            "phpcs --standard=./ruleset.xml --warning-severity=10 src tests"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Ade Attwood",
+            "email": "ade@practically.io",
+			"role" : "Developer"
+        }
+    ]
+}

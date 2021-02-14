@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<ruleset name="Practically">
+    <description>Practically's coding standards</description>
+
+    <arg name="colors" />
+
+    <rule ref="PSR1" />
+
+    <rule ref="PSR2">
+        <exclude name="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody" />
+    </rule>
+
+    <rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+        <exclude-pattern>*/migrations/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.Found">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+        <exclude-pattern>*/migrations/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FunctionComment.MissingParamTag">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.PHP.EmbeddedPhp.ContentAfterOpen">
+        <exclude-pattern>*/views/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd">
+        <exclude-pattern>*/views/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Generic.WhiteSpace.ScopeIndent.IncorrectExact">
+        <exclude-pattern>*/views/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FunctionComment.Missing">
+        <exclude-pattern>*/tests/*</exclude-pattern>
+        <exclude-pattern>*/migrations/*</exclude-pattern>
+    </rule>
+
+    <rule ref="Generic.Commenting.Todo.CommentFound">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="Generic.CodeAnalysis" />
+
+    <rule ref="Zend.Debug.CodeAnalyzer" />
+
+    <rule ref="Squiz.Arrays">
+        <exclude name="Squiz.Arrays.ArrayDeclaration.KeySpecified" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast" />
+        <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned" />
+    </rule>
+
+    <rule ref="Generic.PHP">
+        <exclude name="Generic.PHP.ClosingPHPTag.NotFound" />
+        <exclude name="Generic.PHP.UpperCaseConstant.Found" />
+    </rule>
+
+    <rule ref="Squiz.PHP">
+        <exclude name="Squiz.PHP.Heredoc.NotAllowed" />
+        <exclude name="Squiz.PHP.DisallowInlineIf" />
+        <exclude name="Squiz.PHP.DisallowMultipleAssignments.Found" />
+        <exclude name="Squiz.PHP.DisallowBooleanStatement.Found" />
+        <exclude name="Squiz.PHP.DisallowComparisonAssignment.AssignedComparison" />
+    </rule>
+
+    <rule ref="Squiz.Strings">
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
+    </rule>
+
+    <rule ref="Generic.Strings" />
+
+    <rule ref="PEAR.Commenting">
+        <exclude name="PEAR.Commenting.FileComment" />
+        <exclude name="PEAR.Commenting.ClassComment.InvalidPackage" />
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamTag" />
+    </rule>
+
+    <rule ref="PEAR.Commenting.FileComment.MissingCategoryTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FileComment.InvalidPackage">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FileComment.MissingPackageTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FileComment.MissingLicenseTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FileComment.MissingLinkTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.ClassComment.MissingCategoryTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.ClassComment.InvalidPackage">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.ClassComment.MissingPackageTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.ClassComment.MissingLicenseTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.ClassComment.MissingLinkTag">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="Squiz.Commenting.VariableComment" >
+		<!-- This rule does not work very nicely with Psalm -->
+        <exclude name="Squiz.Commenting.VariableComment.IncorrectVarType" />
+	</rule>
+
+    <rule ref="Squiz.Commenting.VariableComment.Missing">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="PEAR.Commenting.FunctionComment.MissingParamComment">
+        <type>warning</type>
+    </rule>
+
+    <rule ref="Squiz.ControlStructures">
+        <exclude name="Squiz.ControlStructures.ElseIfDeclaration.NotAllowed" />
+        <exclude name="Squiz.ControlStructures.SwitchDeclaration.MissingDefault" />
+        <exclude name="Squiz.ControlStructures.SwitchDeclaration.BreakIndent" />
+    </rule>
+
+    <rule ref="Squiz.Functions">
+    </rule>
+
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120" />
+            <property name="absoluteLineLimit" value="0" />
+        </properties>
+    </rule>
+
+    <rule ref="Squiz.WhiteSpace">
+        <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose" />
+		<exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing.Before" />
+    </rule>
+
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+        </properties>
+    </rule>
+
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n" />
+        </properties>
+    </rule>
+
+    <rule ref="Generic.Formatting">
+        <exclude name="Generic.Formatting.SpaceBeforeCast.NoSpace" />
+        <exclude name="Generic.Formatting.SpaceAfterCast.NoSpace" />
+        <exclude name="Generic.Formatting.SpaceAfterNot.Incorrect" />
+        <exclude name="Generic.Formatting.MultipleStatementAlignment" />
+    </rule>
+
+</ruleset>

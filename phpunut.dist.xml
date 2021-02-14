@@ -1,0 +1,16 @@
+<phpunit colors="true">
+  <testsuites>
+    <testsuite name="core">
+      <directory suffix="Test.php">tests</directory>
+    </testsuite>
+  </testsuites>
+   <filter>
+        <whitelist>
+            <directory>src</directory>
+        </whitelist>
+    </filter>
+	<php>
+		<ini name="opcache.enable_cli" value="1"/>
+		<ini name="opcache.enable" value="1"/>
+	</php>
+</phpunit>
