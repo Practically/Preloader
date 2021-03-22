@@ -1,6 +1,10 @@
 # Preloader
 
-PHP preloading for PHP ^7.4
+PHP preloading for PHP ^7.4. Preloading is a feature of php that will pre
+compile php functions and classes in to opcache. This is then available in your
+programs with out needing to require the files for speed improvements. To read
+more on php preloading you can see the [opcache.preloading
+documentation](https://www.php.net/manual/en/opcache.preloading.php)
 
 ## Installation
 
