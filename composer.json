@@ -1,9 +1,9 @@
 {
     "name": "practically/preloader",
-    "description": "PHP preloading for PHP ^7.4",
+    "description": "PHP preloading for PHP >=7.4",
     "type": "library",
 	"require": {
-		"php": "^7.4"
+		"php": ">=7.4"
 	},
     "require-dev": {
         "symfony/phpunit-bridge": "^5.2",
