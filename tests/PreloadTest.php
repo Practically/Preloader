@@ -44,7 +44,7 @@ class PreloadTest extends TestCase
         $this->autoloader = require(dirname(__DIR__).'/vendor/autoload.php');
         $this->opcacheStatus = opcache_get_status();
 
-        if ($this->opcacheStatus['opcache_enabled'] === false) {
+        if ($this->opcacheStatus === false || $this->opcacheStatus['opcache_enabled'] === false) {
             $this->fail('Opcache must be enabled to test the preloader');
         }
     }
