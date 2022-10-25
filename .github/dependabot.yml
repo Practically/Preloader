@@ -9,4 +9,7 @@ updates:
     commit-message:
       prefix: "chore:"
     assignees:
-      - "AdeAttwood"
+      - "GeorgeCadwallader"
+      - "StuTheWebGuy"
+      - "davepractically"
+      - "gwynbox"
