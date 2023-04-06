@@ -4,16 +4,17 @@ jobs:
   commits:
     name: Commitlint
     runs-on: ubuntu-latest
+    container: practically/conventional-tools:1.x
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 1000
+        uses: actions/checkout@v3
+        with: {fetch-depth: 1000}
+
+      - name: Git safe.directory
+        run: git config --system --add safe.directory '*'
 
       - name: Lint commits
-        uses: docker://registry.k1.zportal.co.uk/practically-oss/conventional-tools:0.x
-        with:
-          args: conventional-tools commitlint -l1
+        run: conventional-tools commitlint -l1
 
   phpcs:
     name: PHP Code Sniffer
